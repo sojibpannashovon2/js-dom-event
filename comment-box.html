@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment-box</title>
+</head>
+
+<body>
+    <h1>Top 10 Historical Places in Bangladesh</h1>
+
+    <div id="comment-container">
+        <p>1. Lalbagh Fort:
+            The 17th century Mughal fort which stands by the Buriganga River is one of the oldest architecture of
+            Bangladesh. It was built by the then Mughal Subahdar Muhammad Azam Shah, son of Emperor Aurangzeb. It is
+            believed that the construction of the fort was never completed.
+
+
+        </p>
+        <p>2. Ahsan Manzil:
+            Initially, it was a vacation house for a Zamindar of Jamalpur district, Sheikh Enayet Ullah. After his
+            death, his son sold this property to the French traders in 1740. They dug a pond in front of the building
+            where fresh water could be fetched. After having a great business in the subcontinent for almost a century,
+            they surrendered under the full British power and sold all of their properties. So, in 1830, Khwaja
+            Alimullah an established man in Dhaka bought the property. He added a mosque in this compound. After his
+            death, his son Khwaja Abdul Gani made some progressive look to the property and named it “Ahsan Manzil”
+            after his son Ahsan Ullah.
+        </p>
+
+        <p>4. Mahansthangarh:
+            This place lies in a village of Bogra district called Mahasthan. Garh means fort, so Mahasthangarh
+            means fort of Mahasthan.
+
+            Francis Buchanan Hamilton, a Physician, first discovered this place in 1808. However, he made some
+            significant contributions as a Geographer during his stay in Indian subcontinent. It is the last remaining
+            piece of a village Pundranagara of that time. The village was alive until the 8th century AD.
+        </p>
+
+    </div>
+
+    <br>
+
+    <div>
+        <textarea name="" id="comment-inbox" cols="60" rows="5"></textarea>
+        <br>
+        <button id="button-post">Post</button>
+    </div>
+
+    <script>
+
+        // 1. Get the comment containner
+
+        document.getElementById('button-post').addEventListener('click', function () {
+
+            const commentInbox = document.getElementById('comment-inbox');
+            // console.log('Se amre amr hote dei na');
+            const commentText = commentInbox.value;
+
+
+            // 2. Create a new comment for commentText
+
+            const commentContainer = document.getElementById('comment-container');
+
+
+            const newComment = document.createElement('p');
+
+            // 3. Storing the the new comment into comment Text
+
+            newComment.innerText = commentText;
+
+            // Added the new paragarph into the comment-container/ old comment section 
+
+            commentContainer.appendChild(newComment);
+
+            commentInbox.value = '';
+
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
