@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event of dom</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <h1>I am becoming expert in dom event </h1>
+
+    <br>
+    <br>
+    <p id="input-text">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="update-button">Update</button>
+
+    <br>
+    <br>
+
+    <h3 id="changing-option">Se Amare amar hote dei na</h3>
+
+    <!-- // option 1 -->
+
+    <button onclick="handalOnClick()"> Are you going to cheak?</button>
+
+    <!-- //option 2 -->
+
+    <button id="option-two"> Change this quaots</button>
+
+</body>
+
+<script>
+
+    // option 1 by call the button by function
+
+    function handalOnClick() {
+
+        const changingOption = document.getElementById('changing-option');
+
+        changingOption.innerText = " Khepa chere gele moner manus to ar pabe na ";
+    }
+
+
+    // option 2 by call the button by function directly
+
+    document.getElementById('option-two').addEventListener('click', function () {
+
+        const changingOption2 = document.getElementById('changing-option');
+
+        changingOption2.innerText = ' Amar pran dhoria maro tan mon ta korte anacha';
+    })
+
+    // option 2 Recape
+
+    document.getElementById('update-button').addEventListener('click', function () {
+        const inputfield = document.getElementById('input-field');
+
+        const inputText = inputfield.value;
+
+        const p = document.getElementById('input-text');
+
+        p.innerText = inputText;
+
+        inputfield.value = '';
+
+
+    })
+
+</script>
+
+</html>
